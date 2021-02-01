@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130429672-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-130429672-1');
+    </script>
+    <link rel="icon" href="img/confix.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/confix.png">
+    <title>Club de Inglés</title>
+    <!--<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js">
+        </script>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="index.js"></script>
+
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/mains.scss" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: 1
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: 1
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+    <!--spreadsheet-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: 'https://api.apispreadsheets.com/data/6975/',
+                type: 'post',
+                data: $("#myForm").serializeArray(),
+                success: function() {
+                    alert("SU PEDIDO YA ESTÁ  EN CAMINO, PAGO EN EFECTIVO A CONTRA ENTREGA, GRACIAS POR LA COMPRA");
+                },
+                error: function() {
+                    alert("ERROR :(")
+                }
+
+            });
+
+        }
+    </script>
+    <!--SlickSlider-->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <style type="text/css">
+        html,
+        * {
+            box-sizing: border-box;
+        }
+        
+        .slider {
+            width: 90%;
+            margin: 10px auto;
+        }
+        
+        .slick-slide {
+            margin: 0px 0px;
+        }
+        
+        .slick-slide img {
+            width: 100%;
+        }
+        
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+        
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+        
+        .slick-active {
+            opacity: .5;
+        }
+        
+        .slick-current {
+            opacity: 1;
+        }
+    </style>
+    <!--Fin Slick Slider-->
+    <style>
+        .contenedor {
+            color: aliceblue;
+        }
+    </style>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 40%;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <section style="background-image: url('img/a11.png');
+    background-size: cover; height:333px; padding-top:80px;"></section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-ms-12 col-md-12 col-lg-12 col-xl-12">
+                    <p> <strong> <h2>Marco Común Europeo de Referencia para las lenguas</h2> </strong> </p>
+                    <strong>
+                        <!--Nivel A-->
+                        <p> <strong> <h5>Nivel A (Usuario básico)</h5> </strong> </p>
+                    <strong>
+<p id="A1">
+    
+     
+    Subnivel A1 (Acceso)<br>
+    Descripción
+</p>
+</strong>
+                    <p>
+                        Es capaz de comprender y utilizar expresiones cotidianas de uso muy frecuente así como frases sencillas destinadas a satisfacer necesidades de tipo inmediato. Puede presentarse a sí mismo y a otros, pedir y dar información personal básica sobre su domicilio,
+                        sus pertenencias y las personas que conoce. Puede relacionarse de forma elemental siempre que su interlocutor hable despacio y con claridad y esté dispuesto a cooperar.
+
+
+                    </p>
+
+                    <strong>
+                        <p id="A2">
+                            
+                            Subnivel A2 (Plataforma)<br>
+                            Descripción
+                        </p>
+                        </strong>
+
+                    <p>
+                        Es capaz de comprender frases y expresiones de uso frecuente relacionadas con áreas de experiencia que le son especialmente relevantes (información básica sobre sí mismo y su familia, compras, lugares de interés, ocupaciones, etc). Sabe comunicarse a
+                        la hora de llevar a cabo tareas simples y cotidianas que no requieran más que intercambios sencillos y directos de información sobre cuestiones que le son conocidas o habituales. Sabe describir en términos sencillos aspectos de
+                        su pasado y su entorno así como cuestiones relacionadas con sus necesidades inmediatas.
+
+
+                    </p>
+
+                    <!--Fin Nivel-->
+                    <!--Nivel B-->
+                    <p> <strong> <h5>Nivel B (Usuario independiente)</h5> </strong> </p>
+                    <strong>
+<p id="B1">
+
+
+Subnivel B1 (Intermedio)<br>
+Descripción
+</p>
+</strong>
+                    <p>
+                        Es capaz de comprender los puntos principales de textos claros y en lengua estándar si tratan sobre cuestiones que le son conocidas, ya sea en situaciones de trabajo, de estudio o de ocio. Sabe desenvolverse en la mayor parte de las situaciones que pueden
+                        surgir durante un viaje por zonas donde se utiliza la lengua. Es capaz de producir textos sencillos y coherentes sobre temas que le son familiares o en los que tiene un interés personal. Puede describir experiencias, acontecimientos,
+                        deseos y aspiraciones, así como justificar brevemente sus opiniones o explicar sus planes.
+
+
+                    </p>
+
+                    <strong>
+    <p id="B2">
+        
+        Subnivel B2 (Intermedio alto)<br>
+        Descripción
+    </p>
+    </strong>
+
+                    <p>
+                        Es capaz de entender las ideas principales de textos complejos que traten de temas tanto concretos como abstractos, incluso si son de carácter técnico siempre que estén dentro de su campo de especialización. Puede relacionarse con hablantes nativos con
+                        un grado suficiente de fluidez y naturalidad de modo que la comunicación se realice sin esfuerzo por parte de ninguno de los interlocutores. Puede producir textos claros y detallados sobre temas diversos así como defender un punto
+                        de vista sobre temas generales indicando los pros y los contras de las distintas opciones.
+
+
+                    </p>
+
+                    <!--Fin Nivel-->
+                    <!--Nivel C-->
+                    <p> <strong> <h5>Nivel C (Usuario competente)</h5> </strong> </p>
+                    <strong>
+<p id="C1">
+    
+     
+    Subnivel C1 (Dominio operativo eficaz)<br>
+    Descripción
+</p>
+</strong>
+                    <p>
+                        Es capaz de comprender una amplia variedad de textos extensos y con cierto nivel de exigencia, así como reconocer en ellos sentidos implícitos. Sabe expresarse de forma fluida y espontánea sin muestras muy evidentes de esfuerzo para encontrar la expresión
+                        adecuada. Puede hacer un uso flexible y efectivo del idioma para fines sociales, académicos y profesionales. Puede producir textos claros, bien estructurados y detallados sobre temas de cierta complejidad, mostrando un uso correcto
+                        de los mecanismos de organización, articulación y cohesión del texto.
+
+
+                    </p>
+
+                    <strong>
+                        <p id="C2">
+                            
+                            Subnivel C2 (Maestría)<br>
+                            Descripción
+                        </p>
+                        </strong>
+
+                    <p>
+                        Es capaz de comprender con facilidad prácticamente todo lo que oye o lee. Sabe reconstruir la información y los argumentos procedentes de diversas fuentes, ya sean en lengua hablada o escrita, y presentarlos de manera coherente y resumida. Puede expresarse
+                        espontáneamente, con gran fluidez y con un grado de precisión que le permite diferenciar pequeños matices de significado incluso en situaciones de mayor complejidad.
+
+
+                    </p>
+
+                    <!--Fin Nivel-->
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 1500); // Change image every 2 seconds
+        }
+    </script>
+    Slider*************************-->
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js ">
+    </script>
+    <script type="text/javascript " src="index.js "></script>
+
+    <!--
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+
+
+    <a class="coded-on-replit" href="https://wa.me/573117379576" target="_blank"><img src="img/wat.png" alt="replit" />
+    </a>
+    <br>
+    <div class="container">
+        <div class="row">
+            <!--1A COLUMNA-->
+            <div class="col-12 col-ms-12 col-md-12 col-lg-4 col-xl-4">
+                <footer id="footer">
+                    <strong>Club de Inglés</strong>
+                    <a href="https://www.facebook.com/clubidiomaingles" id="link"> <i class="fa fa-facebook-f" style="font-size:20px;color:blue"></i></a>
+
+
+                    <a href="https://www.instagram.com/clubidiomaingles" id="link"> <i class="fa fa-instagram" style="font-size:20px;color:red"></i></a>
+                    <strong>2021</strong>
+                </footer>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!--SlickSlider-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+
+
+            $(".lazy").slick({
+                lazyLoad: 'ondemand', // ondemand progressive anticipated
+                infinite: true
+            });
+            $(".lazy2").slick({
+                lazyLoad: 'ondemand', // ondemand progressive anticipated
+                infinite: true
+            });
+        });
+    </script>
+    <!--Fin SlickSlider-->
+</body>
+
+</html>
